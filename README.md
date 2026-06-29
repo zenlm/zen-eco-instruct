@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="zen-eco-instruct" width="880"></p>
+
 # Zen Eco 4B Instruct
 
 Efficient instruction-following model. Part of the Zen Eco family.
