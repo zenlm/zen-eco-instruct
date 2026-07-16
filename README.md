@@ -8,11 +8,12 @@ Efficient instruction-following model. Part of the Zen Eco family.
 
 ## Overview
 
-Zen Eco 4B Instruct is the instruction-tuned variant of Zen Eco 4B. Fine-tuned for following complex instructions with high accuracy while maintaining the compact efficiency of the Eco architecture.
+Zen Eco 4B Instruct is based on [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) (Apache 2.0, Alibaba Qwen), a compact 4B dense instruction model, packaged for the OSS-clean Zen Eco line. Not trained from scratch.
 
 | Property | Value |
 |----------|-------|
-| Parameters | 4B |
+| Parameters | 4B (dense) |
+| Architecture | Qwen3 (`Qwen3ForCausalLM`) |
 | Context | 32K |
 | License | Apache 2.0 |
 
@@ -29,6 +30,10 @@ inputs = tokenizer.apply_chat_template(messages, return_tensors="pt")
 output = model.generate(inputs, max_new_tokens=512)
 print(tokenizer.decode(output[0], skip_special_tokens=True))
 ```
+
+## Upstream
+
+Built on [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) by Alibaba Qwen, licensed under Apache 2.0. See [NOTICE](NOTICE).
 
 ## Related
 
